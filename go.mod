@@ -1,3 +1,3 @@
-module github.com/gravwell/srslog
+module github.com/axonops/srslog
 
 go 1.15
