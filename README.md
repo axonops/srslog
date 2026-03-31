@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/RackSec/srslog.svg?branch=master)](https://travis-ci.org/RackSec/srslog)
+[![CI](https://github.com/RackSec/srslog/actions/workflows/ci.yml/badge.svg)](https://github.com/RackSec/srslog/actions/workflows/ci.yml)
 
 # srslog
 
@@ -128,14 +128,16 @@ Run the tests as usual:
 go test
 ```
 
-But we've also provided a test coverage script that will show you which
-lines of code are not covered:
+
+To generate coverage locally:
 
 ```
-script/coverage --html
+go test -coverprofile=coverage.out ./...
+go tool cover -func=coverage.out
 ```
 
-That will open a new browser tab showing coverage information.
+CI is handled via GitHub Actions.
+
 
 # License
 
